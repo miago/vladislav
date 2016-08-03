@@ -57,7 +57,7 @@ class Question {
         var position: Int = 0
         var firstTime = true
         
-        for i in 0...totalTrueAnswers {
+        for i in 0..<totalTrueAnswers {
             while (rndCode[position] != -1) || firstTime {
                 position = Int(arc4random_uniform(UInt32(nrOfAnswers)))
                 firstTime = false
@@ -68,8 +68,4 @@ class Question {
         return rndCode
     }
     
-}
-
-enum QuestionError: ErrorType {
-    case InvalidQuestionNumber
 }

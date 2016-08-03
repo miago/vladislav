@@ -45,5 +45,7 @@ class VladislavTests: XCTestCase {
         XCTAssert(rndCode.count == 3)
         
         XCTAssert(rndCode[0] == -1)
+        XCTAssert(rndCode[1] == -1)
+        XCTAssert(rndCode[2] == -1)
     }
 }
