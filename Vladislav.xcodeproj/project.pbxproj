@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		15F2F8001D4DD50500EBBA4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F2F7FF1D4DD50500EBBA4A /* AppDelegate.swift */; };
-		15F2F8021D4DD50500EBBA4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F2F8011D4DD50500EBBA4A /* ViewController.swift */; };
 		15F2F8051D4DD50500EBBA4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15F2F8031D4DD50500EBBA4A /* Main.storyboard */; };
 		15F2F8081D4DD50500EBBA4A /* Vladislav.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15F2F8061D4DD50500EBBA4A /* Vladislav.xcdatamodeld */; };
 		15F2F80A1D4DD50500EBBA4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15F2F8091D4DD50500EBBA4A /* Assets.xcassets */; };
@@ -17,6 +16,7 @@
 		15F2F8231D4DD50500EBBA4A /* VladislavUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F2F8221D4DD50500EBBA4A /* VladislavUITests.swift */; };
 		15F2F8311D4DDB8500EBBA4A /* MuscleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F2F8301D4DDB8500EBBA4A /* MuscleViewController.swift */; };
 		15F2F8331D4E54CB00EBBA4A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F2F8321D4E54CB00EBBA4A /* Question.swift */; };
+		15F2F8371D4E7B2400EBBA4A /* AnswerCandidateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F2F8361D4E7B2400EBBA4A /* AnswerCandidateTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 /* Begin PBXFileReference section */
 		15F2F7FC1D4DD50500EBBA4A /* Vladislav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vladislav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15F2F7FF1D4DD50500EBBA4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		15F2F8011D4DD50500EBBA4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		15F2F8041D4DD50500EBBA4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15F2F8071D4DD50500EBBA4A /* Vladislav.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Vladislav.xcdatamodel; sourceTree = "<group>"; };
 		15F2F8091D4DD50500EBBA4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +52,7 @@
 		15F2F8241D4DD50500EBBA4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15F2F8301D4DDB8500EBBA4A /* MuscleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuscleViewController.swift; sourceTree = "<group>"; };
 		15F2F8321D4E54CB00EBBA4A /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		15F2F8361D4E7B2400EBBA4A /* AnswerCandidateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerCandidateTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				15F2F7FF1D4DD50500EBBA4A /* AppDelegate.swift */,
-				15F2F8011D4DD50500EBBA4A /* ViewController.swift */,
 				15F2F8031D4DD50500EBBA4A /* Main.storyboard */,
+				15F2F8361D4E7B2400EBBA4A /* AnswerCandidateTableViewCell.swift */,
 				15F2F8321D4E54CB00EBBA4A /* Question.swift */,
 				15F2F8301D4DDB8500EBBA4A /* MuscleViewController.swift */,
 				15F2F8091D4DD50500EBBA4A /* Assets.xcassets */,
@@ -202,6 +202,7 @@
 				TargetAttributes = {
 					15F2F7FB1D4DD50500EBBA4A = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 3XB245QWCD;
 					};
 					15F2F8121D4DD50500EBBA4A = {
 						CreatedOnToolsVersion = 7.3;
@@ -266,10 +267,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				15F2F8331D4E54CB00EBBA4A /* Question.swift in Sources */,
-				15F2F8021D4DD50500EBBA4A /* ViewController.swift in Sources */,
 				15F2F8311D4DDB8500EBBA4A /* MuscleViewController.swift in Sources */,
 				15F2F8081D4DD50500EBBA4A /* Vladislav.xcdatamodeld in Sources */,
 				15F2F8001D4DD50500EBBA4A /* AppDelegate.swift in Sources */,
+				15F2F8371D4E7B2400EBBA4A /* AnswerCandidateTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,10 +412,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Vladislav/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cr2032.Vladislav;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -422,10 +426,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Vladislav/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cr2032.Vladislav;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -494,6 +501,7 @@
 				15F2F8291D4DD50500EBBA4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		15F2F82A1D4DD50500EBBA4A /* Build configuration list for PBXNativeTarget "VladislavTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +510,7 @@
 				15F2F82C1D4DD50500EBBA4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		15F2F82D1D4DD50500EBBA4A /* Build configuration list for PBXNativeTarget "VladislavUITests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +519,7 @@
 				15F2F82F1D4DD50500EBBA4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
