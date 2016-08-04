@@ -12,10 +12,9 @@ class Question {
     var muscleName: String
     var origos = [String]()
     var insertios = [String]()
-    let placeholderText = "Nemo Plus"
-    let nrOfAnswers: Int = 5
+    static let placeholderText = "Nemo Plus"
+    var totalTrueAnswers: Int
     var randomizedAnswers = [String]()
-    
     
     // contains nrOfAnswers elements
     // the inserted wrong answers are marked with -1
@@ -33,9 +32,17 @@ class Question {
         self.muscleName = muscleName
         self.origos = origos
         self.insertios = insertios
+        
+        self.totalTrueAnswers = origos.count + insertios.count
+        
+        self.randomCode =  Question.generateRandomCode(self.totalTrueAnswers, nrOfAnswers: Constants.numberOfPossibleAnswers)
     }
     
     static func getNthElement(elementNumber: Int, origos: [String], insertios: [String]) -> String? {
+        if (elementNumber == -1) {
+            return self.placeholderText
+        }
+        
         if elementNumber >= (origos.count + insertios.count) {
             return nil
         }
@@ -68,4 +75,11 @@ class Question {
         return rndCode
     }
     
+    func getRandomizedStrings() -> [String] {
+        for i in 0..<Constants.numberOfPossibleAnswers {
+            self.randomizedAnswers.append(Question.getNthElement(self.randomCode[i], origos: self.origos, insertios: self.insertios)!)
+        }
+        
+        return self.randomizedAnswers
+    }
 }

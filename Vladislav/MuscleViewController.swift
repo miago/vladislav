@@ -25,13 +25,21 @@ class MuscleViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         let q0 = Question(muscleName: "M. Sternocleidomastodeus", origos: ["Sternum", "Clavicula"], insertios: ["Mastoideus"])
+        
+        let q1 = Question(muscleName: "M. Trapezius", origos: ["P. Coracoideus", "P. Bla Bla"], insertios: ["Tuberc."])
+        
+        var rndQuestionNumber = Int(arc4random_uniform(UInt32(questions.count)))
     
         questions.append(q0)
+        questions.append(q1)
         
-        setQuestion(questions[0])
+        setQuestion(questions[rndQuestionNumber])
 
         possibleAnswersTable.delegate = self
         possibleAnswersTable.dataSource = self
+        
+        possibleAnswersTable.rowHeight = CGFloat( Constants.rowHeight)
+        
     }
     
     // MARK: methods for table
@@ -43,7 +51,6 @@ class MuscleViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (questions[0].origos.count + questions[0].insertios.count)
     }
-    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! AnswerCandidateTableViewCell

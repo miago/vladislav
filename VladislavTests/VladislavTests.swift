@@ -48,4 +48,23 @@ class VladislavTests: XCTestCase {
         XCTAssert(rndCode[1] == -1)
         XCTAssert(rndCode[2] == -1)
     }
+    
+    func testGetRandomizedString() {
+        let muscleName = "M. Deltoideus"
+        let origos = ["Clavicula", "Acromion"]
+        let insertios = ["Humerus"]
+        
+        let q0 = Question(muscleName: muscleName, origos: origos, insertios: insertios)
+        
+        
+        q0.randomCode = [Int](count: Constants.numberOfPossibleAnswers, repeatedValue: -1)
+        
+        let rndStrings = q0.getRandomizedStrings()
+        
+        for i in 0..<Constants.numberOfPossibleAnswers {
+            XCTAssert(rndStrings[i] == Question.placeholderText)
+        }
+
+        
+    }
 }
